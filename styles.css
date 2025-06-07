@@ -1,0 +1,17 @@
+.fs-little {
+  font-size: 12px;
+}
+
+.col-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 2px;
+  top: 60%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+}

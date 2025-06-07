@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container mt-2 rounded-1">
+      <div class="card">
+        <div class="card-header bg-secondary-subtle">
+          <h2>Payment form example</h2>
+        </div>
+        <div class="card-body">
+          <p
+            class="rounded-1 bg-danger-subtle p-3 text-danger-emphasis fw-medium"
+          >
+            Some fields are missing
+          </p>
+          <div class="row my-2">
+            <div class="col-5">
+              <label for="card_number" class="form-label fw-medium"
+                >Card #</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="card_number"
+                placeholder="XXXXXXXXXXXXXXXX"
+              />
+            </div>
+            <div class="col-3">
+              <label for="cvv" class="form-label fw-medium">CVC #</label>
+              <input
+                type="password"
+                class="form-control"
+                id="cvv"
+                placeholder="0000"
+              />
+            </div>
+            <div class="col-4">
+              <i class="fa fa-usd currency-symbol" aria-hidden="true"></i>
+              <label for="amount" class="form-label">Amount</label>
+              <input
+                type="number"
+                class="form-control"
+                id="amount"
+                placeholder="Amount"
+              />
+            </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-6">
+              <label for="name" class="form-label fw-medium">First Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="col-6">
+              <label for="lastname" class="form-label fw-medium"
+                >Last Name</label
+              >
+              <input type="text" class="form-control" id="lastname" />
+            </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-6">
+              <label for="city" class="form-label fw-medium">City</label>
+              <input type="text" class="form-control" id="city" />
+            </div>
+            <div class="col-3">
+              <label for="state" class="form-label fw-medium">State</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Pick a state</option>
+                <option value="1">State One</option>
+                <option value="2">State Two</option>
+                <option value="3">State Three</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <label for="zip_code" class="form-label fw-medium"
+                >Postal Code</label
+              >
+              <input type="text" class="form-control" id="zip_code" />
+            </div>
+          </div>
+          <div class="row my-2">
+            <div class="col-6">
+              <p class="fw-medium">We accept:</p>
+              <div class="input-group">
+                <div class="input-group-text bg-secondary">
+                  <input
+                    class="mt-0 me-1"
+                    type="radio"
+                    id="payment_mastercard"
+                    name="payment"
+                    aria-label="Radio button for following text input"
+                  />
+                  <label class="form-check-label text-light" for="payment_mastercard">
+                    <i class="fa fa-cc-mastercard me-3" aria-hidden="true"></i>
+                  </label>
+                <input
+                  class="mt-0 me-1"
+                  type="radio"
+                  id="payment_visa"
+                  name="payment"
+                  aria-label="Radio button for following text input"
+                />
+                  <label class="form-check-label" for="payment_visa">
+                    <i class="fa fa-cc-visa me-3 text-light" aria-hidden="true"></i>
+                  </label>
+                <div></div>
+                <input
+                  class="mt-0 me-1"
+                  type="radio"
+                  id="payment_diners"
+                  name="payment"
+                  aria-label="Radio button for following text input"
+                />
+                  <label class="form-check-label" for="payment_diners">
+                    <i class="fa fa-cc-diners-club me-3 text-light" aria-hidden="true"></i>
+                  </label>
+                <input
+                  class="mt-0 me-1"
+                  type="radio"
+                  id="payment_amex"
+                  name="payment"
+                  aria-label="Radio button for following text input"
+                />
+                  <label class="form-check-label" for="payment_amex">
+                    <i class="fa fa-cc-amex text-light" aria-hidden="true"></i>
+                  </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <p class="fw-medium mb-2">Message</p>
+            <div class="form-floating">
+              <textarea class="form-control"id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2"></label>
+            </div>
+            <p class="fw-medium text-body-tertiary fs-little">Add any notes here.</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="card-footer d-flex justify-content-end gap-2">
+        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/9bd7a819ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
